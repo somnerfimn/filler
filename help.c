@@ -21,16 +21,16 @@ char			*line_info(char *line, t_fill *table)
 	return (gen);
 }
 
-char		*ft_line_purs(char *line, t_fill *board)
+char			*ft_line_purs(char *line, t_fill *board)
 {
-	char *gen;
+	char		*gen;
 
 	gen = ft_strnew(board->dx);
 	gen = ft_strcpy(gen, line);
 	return (gen);
 }
 
-void		token_offset(char *line, t_fill *table)
+void			token_offset(char *line, t_fill *table)
 {
 	while (!(ft_isdigit(*line)))
 		line++;
@@ -40,4 +40,3 @@ void		token_offset(char *line, t_fill *table)
 	line++;
 	table->piece_x = ft_atoi(line);
 }
-

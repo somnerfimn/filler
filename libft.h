@@ -152,6 +152,6 @@ int					ft_iterative_factorial(int nb);
 
 int					ft_sqrt(int nb);
 
-int                 get_next_line(const int file_d, char **line);
+int					get_next_line(const int file_d, char **line);
 
 #endif

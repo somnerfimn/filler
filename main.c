@@ -30,41 +30,6 @@ void			check_me(int fd, t_fill *table)
 	(ret > 0) ? free(line) : 0;
 }
 
-void			free_struct(t_fill *table)
-{
-	int				i;
-	t_cord			*dell;
-
-	i = 0;
-	free(table->x_p);
-	free(table->y_p);
-	table->x_p = NULL;
-	table->y_p = NULL;
-	while (table->map[i] != NULL)
-	{
-		ft_strdel(&table->map[i]);
-		i++;
-	}
-	free(table->map);
-	table->map = NULL;
-	i = 0;
-	while (table->figure[i] != NULL)
-	{
-		ft_strdel(&table->figure[i]);
-		i++;
-	}
-	free(table->figure);
-	table->figure = NULL;
-	while (table->curr != NULL)
-	{
-		dell = table->curr;
-		table->curr = table->curr->next;
-		free(dell);
-	}
-	table->curr = NULL;
-	table->last = NULL;
-}
-
 int				main(void)
 {
 	t_fill		table;
@@ -72,7 +37,7 @@ int				main(void)
 
 	fd = 0;
 	check_me(fd, &table);
-	while (1)
+	while (-42)
 	{
 		table.map = get_map(fd, &table);
 		table.figure = get_figure(fd, &table);

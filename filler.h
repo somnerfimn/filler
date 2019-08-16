@@ -13,9 +13,9 @@
 #ifndef FILLER_H
 # define FILLER_H
 # define ABS(x) x < 0 ? -x : x
-#include <string.h>
-#include <stdlib.h>
-#include "libft/libft.h"
+# include <string.h>
+# include <stdlib.h>
+# include "libft.h"
 
 typedef struct		s_cord
 {
@@ -69,7 +69,7 @@ void				helper(t_fill *table);
 
 void				token_offset(char *line, t_fill *table);
 
-void				get_enemy(t_fill *table, int u, t_cord *lst);
+void				set_point(t_fill *table);
 
 void				best_place(t_fill *table, int x, int y);
 
@@ -80,5 +80,7 @@ void				find_place(t_fill *table, int len);
 void				strategy(t_fill *table);
 
 float				ft_rsqrt(float math);
+
+void				send_point(t_cord *lst);
 
 #endif

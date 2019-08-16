@@ -56,9 +56,8 @@ char			**get_figure(int fd, t_fill *table)
 	while ((i < (table->piece_y)) && (ret > 0))
 	{
 		ret = get_next_line(fd, &line);
-		piece[i] = ft_line_purs(line, table);
+		piece[i++] = ft_line_purs(line, table);
 		(ret > 0) ? free(line) : 0;
-		i++;
 	}
 	piece[i] = NULL;
 	return (piece);

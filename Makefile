@@ -19,12 +19,13 @@ SRC =	main.c \
 		result.c \
 		algorith.c \
 		help.c \
-		fsqrt.c 
+		fsqrt.c \
+		free.c
 
 all : $(NAME)
 
 $(NAME):
-	@gcc -I $(INCL) $(SRC) libftprintf.a libft/libft.a -o $(NAME)
+	@gcc -I $(INCL) $(SRC) libft.a -o $(NAME)
 
 clean:
 	@rm -f $(NAME)
